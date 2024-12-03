@@ -131,6 +131,115 @@ tuple
 
 
 
+conditional statements
+-----------------------
+
+if 
+if-else
+if-elif-elif-elif-elif-else
+
+
+
+
+scanf()
+
+
+operators
+---------
+
+arithmetic operators:  + - * % /
+
+relational operators : <    >    <=   >=  ==    !=
+
+logical operators    :   and   or   not
+
+                         if name.isupper()  and len(name) === 6:
+				## do something
+
+assignment operators : ( ++ and -- are NOT allowed in python )
+
+val = 10
+val = val + 1     (or)    val+=1  
+
+
+special operators
+------------------
+in
+
+if 10 in [10,20,30]:
+    ###
+
+if "py" in "python":
+    ###
+
+
++
+---
+
+
+
+user defined functions
+lambda functions
+ - map()
+ - filter()
+ - list comprehension
+
+libraries
+- builtin libraries
+- third party libraries
+
+
+requirement(task)   =  core python       + sound understanding of libraries      
+                      - procedural programming
+                      - object oriented programming
+
+
+
+header files in C
+-------------------
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+#include<string.h>
+
+
+libraries in python
+--------------------
+- testing
+- analytics
+- web development
+- web scraping
+- GUI tools
+- machine learning
+- server automation
+- network automation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
