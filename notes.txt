@@ -1,0 +1,136 @@
+https://codeshare.io/ldx9Kg
+
+
+C language - data types   ( compiler )  c , c++ , java
+-----------
+int a = 10;
+
+int a[3] = {10,20,30};
+
+float b = 34.45;
+
+char c = 'z';
+
+double
+long
+short
+
+
+python - objects   ( interpreter) ( python, perl , shell , ruby , vbscript)
+----------------
+
+number
+string
+list
+tuple
+dictionary
+set
+
+
+number
+------
+number can be integer or decimal or octal or hexa.
+
+val = 10
+aval = 6.54
+
+string
+------
+string is defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "java programming"
+cname = """c programming"""
+
+
+list ( array in C )
+--------------------
+list contains set of elements.
+elements can be set of numbers or strings or any combination.
+list is defined in [].
+
+
+alist = [10,20,30,40]
+blist = ["java","unix","oracle"]
+clist = [30,56,67.54,"unix",[10,20,30],[76,453] ]
+
+
+tuple ( immutable , unchangeable , uneditable )
+-----
+tuple contains set of elements.
+elements can be set of numbers or strings or any combination.
+tuple is defined in ().
+*** Elements inside tuple cannot be modified directly ***
+
+atup = (45,43,56,43,12,23,45)
+btup= (30,56,67.54,"unix",[10,20,30],(76,453) )
+
+
+empdb = [["rita",24],["gita",28]]  # list of lists
+
+empdb1 = [("rita",24),("gita",28),("ram",45)]  # list of tuples
+
+
+
+dictionary  (different names in different languages : json  hash hashmap )
+----------
+
+Index
+------
+chap1   10 
+chap2   20
+chap3   30
+chap4   40
+chap5   40
+------  ----
+keys     values
+
+
+dictionary contains elements in the keys and values.
+dictionary is defined in {}.
+*** indexing is NOT allowed in dictionary ****
+key can be number or string used to identify the value.
+value can be number or string or list or tuple or dictionary or any data structure
+
+syntax:   object = { key:value , key:value , key:value }
+example:   book  = {"chap1":10 , "chap2":20 ,"chap3":30 }
+           data = {1:2,3:4,5:6}
+           book  = {"chap1":["rita","US"] , "chap2":["ram","UK"]  }
+
+
+set
+----
+set is UNORDERED collection of UNIQUE elements of same type.
+
+aset = {10,10,10,20,30,30}
+bset = {30,30,30,40,50}
+
+
+
+programming      - spyder
+(lines of code)
+
+analytics,visualizations - jupyter notebook / google colab
+ML code
+
+object classification
+-----------------------
+
+
+mutable objects ( changeable objects )
+---------------
+list
+dictionary
+set
+
+immutable objects ( unchangeable objects )
+-----------------
+number
+string
+tuple
+
+
+
+
+
+
