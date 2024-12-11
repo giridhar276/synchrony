@@ -1,0 +1,1467 @@
+github repo:
+https://github.com/giridhar276/synchrony/
+
+
+https://github.com/giridhar276/synchrony/blob/main/hr_analytics.zip
+
+https://codeshare.io/ldx9Kg
+
+python -m venv myenv
+myenv\Scripts\activate
+pip install pandas
+
+--------------------
+numpy documentation
+--------------------
+https://sites.engineering.ucsb.edu/~shell/che210d/numpy.pdf
+
+
+https://assets.datacamp.com/blog_assets/PandasPythonForDataScience.pdf
+https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
+https://s3.amazonaws.com/dq-blog-files/pandas-cheat-sheet.pdf
+https://www.dataquest.io/wp-content/uploads/2024/10/Pandas-Cheat-Sheet.pdf
+
+
+
+
+pip install pandas --index-url https://pypi.org/simple/
+
+
+#####################################################
+github link : https://github.com/giridhar276/synchrony
+#####################################################
+
+
+
+name = "python programming"
+print(name)
+print("I love",name)
+#                                                      -4  -3 -2 -1  
+#p   y   t   h   o   n     p   r   o   g   r   a   m   m    i  n  g
+#0   1   2   3   4   5  6  7   8  9   10  11  12  13 14   15  16  17
+
+# string slicing
+# string[start:stop:step] # step is optional
+print(name[0])
+print(name[3])
+print(name[0:9])
+print(name[0:9:1])
+print(name[10:14])
+print(name[2:9])
+print(name[0:17:2]) # p t o  
+print(name[1:17:2])
+print(name[1:20:5])
+print(name[2:13:3])  # tn
+print(name[::])  # name[0:17:1]
+print(name[:])   # name[0:17]
+print(name[-1])
+print(name[-3:-1])  # name[-3:-1:1]
+
+print(name[::-1])
+
+
+
+
+# methods
+name = "python programming"
+print(name.capitalize())
+print(name.title())
+
+print(name.center(40))                              
+print(name.center(40,"*"))
+
+print(name.endswith("g"))
+print(name.endswith("g",1,10))
+
+print(name.upper())
+print(name) # original string will remain same as it is.
+
+print(name.lower())
+
+print(name.replace("python", "java"))
+print(name.count("p"))
+print(name.count("P"))
+print(name.count("P".lower()))
+print(name.startswith("p"))
+print(name.startswith(("z")))
+
+print(name.isupper())
+print(name.islower())
+print(name.isalpha())
+print(name.isalnum())
+
+aname = "  python "
+print(len(aname))
+print(len(aname.strip())) # will remove whitepaces at both ends
+print(len(aname.lstrip()))
+print(len(aname.rstrip()))
+
+# converting string to list
+bname = "python:java:unix:tableau"
+output= bname.split(":")
+print(output)
+
+string = "I love {} and {}" #template - can be reused again n again
+print(string.format("unix","java"))
+print(string.format("ram","shiva"))
+
+# check for substring
+print(name.find("in")) # if substring is existing it returns the index
+                       # if not existing .. it returns -1
+                       
+# simple if
+if 1 < 2 :
+    print("true")
+
+
+# if-else block  
+if name.find("in") != -1:
+    print("substring exists")
+    print("inside if")
+else:
+    print("substring not found")
+    print("inside else")
+    
+# check for substring
+if "in" in name:
+    print("substring exists")
+else:
+    print("not found")
+    
+    
+alist = [10,20,30]
+if 20 in alist:
+    print("exists")
+    
+
+
+    
+    
+    
+ 
+  
+  
+alist = [56,34,7,12,9,31,68,23,6,5]
+
+
+alist.append(90)  # adding single object
+print("After appending :",alist)
+
+alist.extend([48,61,18])  # adding multiple values
+print("After expanding :",alist)
+
+alist.insert(0,100)   # list.insert(index,value)
+print("After inserting :",alist)
+
+#list.pop(index)
+alist.pop(1)   # will remove value at index 1
+print("After pop :",alist)
+
+alist.remove(6)  # if existing.. that value will be removed
+print("After remove :",alist)
+
+if 600 in alist:
+    alist.remove(600)
+    print("After remove :",alist)
+else:
+    print("not found")
+    
+print("get count :",alist.count(100))
+
+
+alist.sort()
+print("sorting in ascending order:", alist)
+
+alist.reverse()
+print("reversing :",alist)
+
+## sum of all the elements in list
+print(sum(alist))
+    
+
+
+
+
+### dictionaries
+
+book = {"chap1":10 , "chap2":20,"chap3":30}
+
+print(book)
+
+# display single value
+print(book["chap1"]) #10
+
+print(book["chap3"]) #30
+
+if "chap6" in book:
+    print(book["chap6"])
+    
+    
+# add new key-value to dictionary
+book["chap4"] = 40
+book["chap5"] = 50
+
+print(book)
+
+# display keys
+print(book.keys())
+
+# display values
+print(book.values())
+
+# display items
+print(book.items())
+
+# remove key-value
+book.pop("chap2") # chap2-20 will be removed
+print("After pop :",book)
+
+# remove last key - value
+book.popitem()
+print("After popitem :",book)
+
+
+#print(book["chap10"])
+print(book.get("chap6")) # If not existing .. it returns None
+
+
+# combining two dictionaries
+newbook = {"chap11":110,"chap12":120}
+
+finalbook = {book,newbook}
+print(finalbook)
+
+
+
+
+
+
+
+
+
+
+# range(start,stop,step)
+## display all values from 1 to 10
+for val in range(1,11):
+    print(val)
+################ dsiplay odd numbers  
+for val in range(1,11,2):
+    print(val)
+############## display numbers in descending 
+for val in range(10,0,-1):
+    print(val)
+    
+#### reading char by char
+name = "python"
+for char in name:
+    print(char)
+############ iterating the list
+alist = [10,20,30]
+for val in alist:
+    print(val)
+############### iterating dictionary
+book = {"chap1":10,"chap2":20}
+for key in book.keys():   # display keys only
+    print(key)
+    
+for value in book.values():
+    print(value)         # display values
+    
+for key,value in book.items():
+    print(key,value)
+    
+    
+########## iterating set
+aset = {10,10,10,20,30}
+for val in aset:
+    print(val)
+    
+    
+
+
+
+
+
+
+###############################
+
+
+
+data = {
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+
+print(type(data))
+print(isinstance(data,dict)) # should return True
+
+
+
+#Standard Generalized Markup Language
+print()
+
+#XML
+print()
+
+
+
+####################################
+
+
+
+
+# range(start,stop,step)
+## display all values from 1 to 10
+for val in range(1,11):
+    print(val)
+################ dsiplay odd numbers  
+for val in range(1,11,2):
+    print(val)
+############## display numbers in descending 
+for val in range(10,0,-1):
+    print(val)
+    
+#### reading char by char
+name = "python"
+for char in name:
+    print(char)
+############ iterating the list
+alist = [10,20,30]
+for val in alist:
+    print(val)
+############### iterating dictionary
+book = {"chap1":10,"chap2":20}
+for key in book.keys():   # display keys only
+    print(key)
+    
+for value in book.values():
+    print(value)         # display values
+    
+for key,value in book.items():
+    print(key,value)
+    
+    
+########## iterating set
+aset = {10,10,10,20,30}
+for val in aset:
+    print(val)
+    
+    
+
+
+
+#########################################################################################################################
+
+
+
+
+data = {
+    'Sales': {
+        'North': {
+            'Alice': 'Manager',
+            'Bob': 'Sales Executive',
+            'Eve': 'Sales Coordinator',
+            'John': 'Account Manager'
+        },
+        'South': {
+            'Charlie': 'Sales Executive',
+            'Grace': 'Regional Sales Manager',
+            'Mallory': 'Business Development Associate'
+        },
+        'West': {
+            'Oscar': 'Sales Executive',
+            'Peggy': 'Account Executive',
+            'Victor': 'Territory Sales Manager'
+        }
+    },
+    'Marketing': {
+        'Digital': {
+            'David': 'SEO Specialist',
+            'Hannah': 'Content Strategist',
+            'Irene': 'Social Media Manager'
+        },
+        'Offline': {
+            'Eve': 'Event Coordinator',
+            'Jake': 'Brand Manager',
+            'Liam': 'Public Relations Specialist'
+        },
+        'Research': {
+            'Mia': 'Market Research Analyst',
+            'Noah': 'Customer Insights Manager'
+        }
+    },
+    'IT': {
+        'Infrastructure': {
+            'Quinn': 'Network Engineer',
+            'Riley': 'System Administrator',
+            'Sam': 'Cloud Architect'
+        },
+        'Development': {
+            'Tina': 'Software Engineer',
+            'Uma': 'Backend Developer',
+            'Walter': 'Full Stack Developer'
+        }
+    },
+    'HR': {
+        'Recruitment': {
+            'Yara': 'Recruitment Specialist',
+            'Zane': 'Talent Acquisition Manager',
+            'Nina': 'HR Coordinator'
+        },
+        'Employee Relations': {
+            'Oliver': 'Employee Relations Specialist',
+            'Sophia': 'HR Business Partner'
+        }
+    },
+    'Finance': {
+        'Accounting': {
+            'Xander': 'Accountant',
+            'Yvette': 'Accounts Payable Specialist',
+            'Zara': 'Financial Analyst'
+        },
+        'Audit': {
+            'Luna': 'Internal Auditor',
+            'Mason': 'Compliance Officer'
+        }
+    }
+}
+
+
+
+
+write a program to display the below output:
+
+
+Sales
+-----
+North
+South
+West
+
+
+Marketing
+--------
+Digital
+Offline
+Research
+
+
+IT
+---
+Infrasturcture
+Development
+
+HR
+---
+Recruitment
+Employee Relations
+
+
+
+
+for key in data:
+    print(key)
+    print("-----------")
+    for ikey in data[key]:
+        print(ikey)
+    print()
+        
+
+
+##############################################################################################################################
+
+write a program to count the frequency of each item in the name.
+
+
+
+Eg:
+
+Enter any string : hello
+
+Output:
+{'h': 1, 'e': 1, 'l': 2, 'o': 1}
+
+Enter any string : mississippi
+{'m': 1, 'i': 4, 's': 4, 'p': 2}
+
+
+
+string = input("Enter any string:")
+
+print("you entered :",string)
+
+for char in set(string):
+    print(char, string.count(char),"times")
+    
+    
+    
+    
+    
+    # method2
+
+frequency = {}
+for char in string:
+    if char in frequency:
+        frequency[char] +=1
+    else:
+        frequency[char] = 1
+print(frequency)
+        
+    
+
+##############################################################################################################################
+
+write a program to reverse the words in the given sentence
+
+
+Example:
+
+Enter any sentence: Hello World
+olleH dlroW
+
+Enter any sentence: Python is fun
+nohtyP si nuf
+
+
+##############################################################################################################################
+
+
+write a program to display the sum of salaries in each department
+
+
+data = {
+    'HR': {
+        'Alice': {'age': 30, 'salary': 50000, 'role': 'Manager', 'years_in_role': 6},
+        'Bob': {'age': 25, 'salary': 40000, 'role': 'Recruiter', 'years_in_role': 3}
+    },
+    'IT': {
+        'Charlie': {'age': 35, 'salary': 70000, 'role': 'Developer', 'years_in_role': 8},
+        'David': {'age': 28, 'salary': 65000, 'role': 'Analyst', 'years_in_role': 2}
+    }
+}
+
+
+
+
+HR 
+----
+total sum of salaries : 90000
+
+
+IT
+-----
+total sum of salaries : 135000
+
+
+
+
+for key,value in data.items():
+    salary = 0
+    for emp,details in value.items():
+        salary = salary + details['salary']
+    
+    print(key)
+    print("-------")
+    print("total sum or salaries :", salary)
+
+##############################################################################################################################
+
+
+colors = [
+{
+"colors": "red",
+"values": "#f00"
+},
+{
+"colors": "green",
+"values": "#0f0"
+},
+{
+"colors": "blue",
+"values": "#00f"
+},
+{
+"colors": "cyan",
+"values": "#0ff"
+},
+{
+"colors": "magenta",
+"values": "#f0f"
+},
+{
+"colors": "yellow",
+"values": "#ff0"
+},
+{
+"colors": "black",
+"values": "#000"
+}
+]
+
+write a program to display all the colors and its values.
+
+sample output :
+
+red #f00
+green #0f0
+yellow  #ff0
+magenta #f0f
+..
+
+..
+..
+
+
+for item in colors:
+    print(item['colors'], item['values'])
+
+##############################################################################################################################
+
+
+write a program to display the below IP addresses
+
+
+output:
+192.168.0.1
+192.168.0.2
+192.168.0.3
+..
+..
+192.168.0.10
+
+
+
+
+fixed = "192.168.0."
+for val in range(1,11):
+    ip = fixed + str(val)
+    print(ip)
+    
+# method2
+fixed = "192.168.0.{}"
+for val in range(1,10):
+    print(fixed.format(val))
+
+##############################################################################################################################
+
+
+write a program to display the below IP addresses
+
+
+output:
+192.168.0.1
+192.168.0.2
+192.168.0.3
+..
+..
+192.168.0.10
+192.168.1.1
+192.168.1.2
+192.168.1.3
+..
+..
+192.168.1.10
+
+
+ip = "192.168.{}.{}"
+for val in range(0,2):
+    for ival in range(1,11):
+        ipaddress = ip.format(val,ival)
+        print(ipaddress)
+
+##############################################################################################################################
+
+
+alist= [
+  {
+    "login": "mojombo",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mojombo",
+    "html_url": "https://github.com/mojombo",
+    "followers_url": "https://api.github.com/users/mojombo/followers",
+    "following_url": "https://api.github.com/users/mojombo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mojombo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mojombo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mojombo/subscriptions",
+    "organizations_url": "https://api.github.com/users/mojombo/orgs",
+    "repos_url": "https://api.github.com/users/mojombo/repos",
+    "events_url": "https://api.github.com/users/mojombo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mojombo/received_events",
+    "type": "User",
+    "site_admin": False
+  },
+  {
+    "login": "defunkt",
+    "id": 2,
+    "node_id": "MDQ6VXNlcjI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/defunkt",
+    "html_url": "https://github.com/defunkt",
+    "followers_url": "https://api.github.com/users/defunkt/followers",
+    "following_url": "https://api.github.com/users/defunkt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/defunkt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/defunkt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/defunkt/subscriptions",
+    "organizations_url": "https://api.github.com/users/defunkt/orgs",
+    "repos_url": "https://api.github.com/users/defunkt/repos",
+    "events_url": "https://api.github.com/users/defunkt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/defunkt/received_events",
+    "type": "User",
+    "site_admin": False
+  }
+]
+
+
+ write a program to display all the keys and values line by line.
+
+
+##############################################################################################################################
+
+define list as below
+
+lang  = ["spark","spark","spark","java","unix","unix","python","python"]
+
+write a program to display each Unique iteam and the no.of times it is repeated
+
+Spark : 3 times
+java    :  1 time
+unix   :  2 times
+python : 2 times
+##############################################################################################################################
+
+define some list as below
+
+alist = ["google","oracle","microsoft"]
+
+write a program to
+add "http://www"  at the beginning and  
+add ".com" at tht end of the string
+
+Output:
+http://www.google.com
+http://www/.oracle.com
+http://www.microsoft.com
+
+
+##############################################################################################################################
+
+
+write a program to display the below IP addresses
+
+192.168.0.1
+192.168.0.2
+192.168.0.3
+..
+..
+192.168.0.10
+192.168.1.1
+192.168.1.2
+192.168.1.3
+..
+..
+192.168.1.10
+
+##############################################################################################################################
+
+define a dictionray as below
+
+{
+"id": "0001",
+"type": "donut",
+"name": "Cake",
+"image":
+{
+"url": "images/0001.jpg",
+"width": 200,
+"height": 200
+},
+"thumbnail":
+{
+"url": "images/thumbnails/0001.jpg",
+"width": 32,
+"height": 32
+}
+}
+
+write a program to display the below output:
+
+id           : 0001
+type         :donut
+name       : Cake
+image.width   : 200
+image.height : 200
+image.url      : images/0001.jpg
+thumbnail.width   : 32
+thumbnail.height : 32
+thumbnail.url      : images/0001.jpg
+
+
+##############################################################################################################################
+
+
+
+
+def display(a,b):
+    c = a + b
+    return c
+
+total = display(10,20) #1
+print(total)
+
+
+'''
+# system calls
+--------------
+display(10,20)
+a = 10
+b = 20
+next level
+a + b
+c
+return
+returning back to display()  : 30
+total = 30
+print(30)
+'''
+
+# lambda function
+# lambda is the single liner function
+# Instead of writing single line function .. we go for lambda
+# Advantage: processing is faster
+# the function body will be replaced in the calling function directly 
+# syntax
+#functionname = lambda variables : expression
+
+display = lambda a,b: a + b
+total = display(10,20) 
+print(total)
+
+check_even_odd = lambda x : "even" if x %2 == 0 else "Oldd"
+status = check_even_odd(10)
+print(status)
+
+numcheck = lambda x : "positive" if x > 0 else "Negative"
+print(numcheck(-3))
+
+
+string = "I love python programming in python academy"
+checkcount = lambda s: {  word : s.split().count(word)      for word in set(s.split())      }
+print(checkcount(string))
+
+#step1: ["I","love","python","programming","in","python","academy"]
+#step2: ("I","love","python","programming","in","academy")
+
+
+
+
+#######################################
+
+
+
+
+def display(a,b):
+    c = a + b
+    return c
+
+total = display(10,20) #1
+print(total)
+
+
+'''
+# system calls
+--------------
+display(10,20)
+a = 10
+b = 20
+next level
+a + b
+c
+return
+returning back to display()  : 30
+total = 30
+print(30)
+'''
+
+# lambda function
+# lambda is the single liner function
+# Instead of writing single line function .. we go for lambda
+# Advantage: processing is faster
+# the function body will be replaced in the calling function directly 
+# syntax
+#functionname = lambda variables : expression
+
+display = lambda a,b: a + b
+total = display(10,20) 
+print(total)
+
+check_even_odd = lambda x : "even" if x %2 == 0 else "Oldd"
+status = check_even_odd(10)
+print(status)
+
+numcheck = lambda x : "positive" if x > 0 else "Negative"
+print(numcheck(-3))
+
+
+string = "I love python programming in python academy"
+checkcount = lambda s: {  word : s.split().count(word)      for word in set(s.split())      }
+print(checkcount(string))
+
+#step1: ["I","love","python","programming","in","python","academy"]
+#step2: ("I","love","python","programming","in","academy")
+
+
+# method1
+alist = [10,20,30]
+#output: [ 15,25,35]
+blist = []
+for val in alist:
+    blist.append(val + 5)
+print(blist)
+
+
+# method2 - using list comprehension
+# [ expression  forloop]
+
+alist = [10,20,30]
+output = [ val+5    for val in alist]
+print(output)
+
+# method3
+# map(function,iterable)  # function can be bulitin function or user defined or lambda function
+alist = [10,20,30]
+
+print(list(map( lambda x: x+5 ,alist)))
+
+# method4
+alist = [10,20,30]
+def increment(x):
+    return x+5
+print(list(map( increment ,alist)))
+
+
+# when to use map()
+# If no. of elements in both input and output .. we will use map()
+
+data= ["10","20","30"]
+print(list(map(int,data)))
+
+info = ["python","unix","r"]
+print(list(map(lambda x: x + " programming",info)))
+
+
+
+
+numbers = [10,20,30]
+squares = list(map(lambda x: x**2, numbers))
+print(squares)
+
+
+
+firstlist = ["python","unix","perl"]
+secondlist = ["language","programming","scripting"]
+
+
+names = list(map(lambda x, y : x + " " + y,firstlist,secondlist))
+print(names)
+
+alist = ["unix","c","oracle"]
+getlen = list(map(lambda x: len(x) , alist))
+print(getlen)
+
+
+
+
+
+
+# method1
+import math  # all the methods will be imported
+print(math.log(2))
+print(math.cos(1))  
+
+# method2
+# importing with alias name
+import matplotlib.pyplot as plt
+plt.plot([10,20],[15,20])
+plt.show()
+
+
+# method3
+#importing required methods only
+from math import sin,tan 
+print(sin(1))
+print(tan(3))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+write a program to display all the files and direcxtories from the current folder line by line
+##############################################################################################################################
+
+write a program to display all the files and direcxtories from the C:\ folder
+##############################################################################################################################
+write a progarm to delete all .txt files from the current directory
+
+##############################################################################################################################
+
+write a program to display todays' time stamp.
+
+
+import datetime
+print(datetime.datetime.now())
+
+##############################################################################################################################
+
+write a script to create 10 directories in the current directory as below.
+
+dir1
+dir2
+dir3
+dir4
+..
+..
+dir10
+
+##############################################################################################################################
+
+
+
+
+import pandas
+
+
+
+
+
+
+write a script to perform the below operations :
+
+1. display current working directory
+2. display login name
+3. display all environment variables
+4. display today's date ( timestamp )
+5. display sep months calendar
+6. display all .py files and its size in bytes
+7. display the modified time of notes.txt file
+8. display current process id
+9. set an environment variables. ( Eg.    TEST_PATH = "C:/Users/Admin/")
+10. Lock and unlock a file using os.open and os.close
+11. Retrieve the current system's load average.
+12. display python version
+
+
+
+
+import os
+import time
+import datetime,dateutil,pytz
+import calendar
+import sys
+import sysconfig
+
+print(os.getcwd())
+
+
+
+# changing the directory
+#os.chdir("C:\\Adminstrator\\Users\\Desktop")
+
+# display login
+print(os.getlogin())
+
+# display all env varaibles
+#print(os.environ)
+
+for key,value in os.environ.items():
+    print(key)
+    print(value)
+    print("-------------------")
+
+# display todays timestamp
+print(time.localtime())
+print(datetime.datetime.now())
+print(datetime.date.today())
+print(time.time())
+
+print(datetime.datetime.fromtimestamp(time.time()))
+
+# calendar operations
+print(calendar.calendar(2024))
+print(calendar.month(2024,9))
+
+# display files and its size
+for file in os.listdir():
+    print(file.ljust(20),os.path.getsize(file),"bytes")
+
+
+# display  modified time of thefile
+filename ="employees.csv"
+
+modifiedtime = os.path.getmtime(filename)
+print(modifiedtime)
+print(datetime.datetime.fromtimestamp(modifiedtime))
+
+# display process id
+print(os.getpid())
+
+
+# creating env varabile
+os.environ["MY_ENV_VAR"] = "test"
+
+for key,value in os.environ.items():
+    print(key)
+    print(value)
+    print("-------------------")
+
+
+
+# lock and unlock a file
+import os
+descriptor = os.open("employees.csv",os.O_RDWR)
+## file operations
+os.close(descriptor)
+
+
+# system load avg
+print(os.getloadavg())
+
+
+
+# python version
+print(sys.version)
+print(sys.version_info)
+print(sysconfig.get_python_version())
+
+
+
+
+
+
+
+##############################################################################################################################
+
+write a script to display the below information ( psutil library)
+
+1. CPU Usage
+2. Memory info ( total memory, available, used)
+3. process info
+4. disk partitions
+5. network statistics
+
+
+
+import psutil
+
+print("=== CPU Usage ===")
+print(f"CPU Usage: {psutil.cpu_percent(interval=1)}%\n")
+
+print("=== Memory Info ===")
+memory = psutil.virtual_memory()
+print(memory)
+
+
+print("=== Disk Partitions ===")
+partitions = psutil.disk_partitions()
+print(partitions)
+
+print("=== Network Statistics ===")
+net_io = psutil.net_io_counters()
+print(net_io)
+
+
+##############################################################################################################################
+write a proram to genreate 6 digit random number
+
+
+import random
+
+# Generate a 6-digit random number
+random_number = random.randint(100000, 999999)
+print(random_number)
+
+
+
+
+##############################################################################################################################
+
+write a program to display all the files and its size in bytes from current directory
+
+
+file1.py   40 bytes
+abc.xlsx   46 bytes
+
+
+
+##############################################################################################################################
+
+
+##############################################################################################################################
+## executable only in anaconda
+
+write a program to read https://www.bankofamerica.com/  webpage and display all the URLs listed in the home page.
+
+Output:
+https://www.bankofamerica.com/#
+https://www.bankofamerica.com/smallbusiness
+https://www.ml.com/wealthmanagement.html
+https://www.bankofamerica.com/credit-cards/
+..
+..
+..
+-
+
+
+##############################################################################################################################
+
+
+################################### frequently used builtin libraries #############################
+
+os         : os level activities
+math       : mathematical operations
+sys        :  sys and python config data
+shutil     : copy,move, rmtree  etc
+urllib     : read the web, downloading the files
+logging    : logging all the events
+smtplib    : sending the mails
+ftplib     : performing ftp operations
+sysconfig  :  sys and python config data
+zipfile    : create/extract the zip files
+rarfile    : create/extract the rar files
+cryptopgraphy : encrypting and decrypting the data or files
+tarfile    : create/extract the tar files
+filecmp    : comparing files or directories
+sqlite3    : python default database
+csv        : reading/writing csv files
+xml        : reading/writing xml files
+calendar   : display month,year calendar info
+datetime   : working with date n time
+time       : working with date n time
+fractions  : working with decimal values
+glob       : display all the files
+heapq      : more of array operations ( getting largest among list )
+subprocess : executing system commands in python (  subprocess.getoutput("ls -ltr")
+pdb        : python debugger
+platform   : platform information
+random     : random operations ( shuffling , random digit ... )
+re         : grep + awk + sed
+socket     : networking programming
+stat       : stats of the file
+statistics : basic statistics
+telnetlib  : accessing remote servers 
+
+#################################################################################################
+
+
+
+
+
+
+try:
+    filename = input("Enter any filename:")
+    os.remove(filename)
+    output  = 1 +"hello"
+except Exception as error:  # base class exception
+    print("File not found")
+    print(error)
+
+try:
+    filename = input("Enter any filename:")
+    os.remove(filename)
+    output  = 1 +"hello"
+except TypeError as err:
+    print("Invalid operator",err)
+except ValueError as err:
+    print("Invalid input",err)
+except (IndexError,KeyError) as err:
+    print("Invalid key or index found..",err)
+except FileNotFoundError as err:
+    print("file is not found..",err)
+except Exception as error:  # base class exception
+    print(error)
+
+
+
+##################################################################################
+
+
+##############
+try:
+    fobj = open("data.txt","r")
+except FileNotFoundError as err:
+    print("file is not found..")
+except Exception as err:
+    print(err)
+else:
+    for line in fobj:
+        print(line)
+finally:
+    print("end of file handling")
+#################
+try:
+    fobj = open("data.txt","r")
+    for line in fobj:
+        print(line)
+except FileNotFoundError as err:
+    print("file is not found..")
+except Exception as err:
+    print(err)
+    
+##############
+try:
+    fobj = open("data.txt","r")
+except FileNotFoundError as err:
+    print("file is not found..")
+except Exception as err:
+    print(err)
+else:
+    try:
+        for line in fobj:
+            print(line + 1)
+    except Exception as err:
+        print("Error in processing",err)
+        
+finally:
+    print("end of file handling")
+    
+
+
+
+
+
+
+
+
+https://assets.datacamp.com/blog_assets/PandasPythonForDataScience.pdf
+
+
+
+
+
+
+import pymssql
+conn = pymysql.connect(host='localhost',user='abcd',password='mypass',port=1433, database = 'mydatabase')
+
+df = pd.read_sql("select * from tablename",conn)
+
+
+
+##################################################################################
+
+import sqlite3
+import pandas as pd
+
+
+
+
+df = pd.read_csv("u.user",sep= "|")
+
+
+
+
+conn = sqlite3.connect("userdata.db")
+#conn =  pymssql.connect(host = "localhost",user="admin",password="mypassword",port = 1433, database= "mydatabase")
+#conn =  cx_Oracle.connect(host = "localhost",user="admin",password="mypassword",port = 1433, database= "mydatabase")
+
+
+
+
+cursor = conn.cursor()
+
+
+tablequery = "drop table users"
+cursor.execute(tablequery)
+
+
+
+
+
+tablequery = "create table users( age integer , gender text , occupation text, zipcode text)"
+
+
+cursor.execute(tablequery)
+
+
+for index,row in df.iterrows():
+    insert_query = f"insert into users values({ row['age']},'{row['gender'] }','{ row['occupation'] }','{ row['zip_code'] }')"
+    cursor.execute(insert_query)
+    
+    
+    
+conn.commit()
+
+
+
+query  = "select * from users"
+df = pd.read_sql(query,conn)
+
+
+
+df
+
+
+tablequery = "create table users( age integer , gender text , occupation text, zipcode text)"
+
+
+
+
+
+
+
+
+
+
+
+
